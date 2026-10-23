@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maris Antiqua: Empires of the Bronze Age</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>MARIS ANTIQUA</h1>
+            <p>Empires of the Bronze Age — Firebase Edition</p>
+        </header>
+
+        <div id="dashboard">
+            <div class="panel">
+                <h3>Global State</h3>
+                <p id="game-phase">Phase: Waiting for Captains...</p>
+                <p id="wind-card">Wind & Tide: None</p>
+                <p id="threat-track">Sea Peoples Threat: 0 / 10</p>
+            </div>
+
+            <div class="panel">
+                <h3>Thalassocrat Commands</h3>
+                <p>Select your hidden action for this round:</p>
+                <button onclick="submitAction('SAIL')">Sail ⛵</button>
+                <button onclick="submitAction('TRADE')">Trade 🏺</button>
+                <button onclick="submitAction('RAID')">Raid ⚔️</button>
+                <button onclick="submitAction('BUILD')">Build 🏗️</button>
+                <p>Current Locked Order: <span id="my-command">None</span></p>
+            </div>
+        </div>
+
+        <div id="leaderboard">
+            <h3>Active Captains</h3>
+            <ul id="player-list"></ul>
+        </div>
+    </div>
+
+    <!-- Firebase SDK Scripts -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
